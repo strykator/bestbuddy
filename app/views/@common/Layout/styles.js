@@ -1,17 +1,29 @@
-//import EStyleSheet from 'react-native-extended-stylesheet';
-import {StyleSheet} from 'react-native';
-import {dimensions} from '../../../styles/index';
+// import EStyleSheet from 'react-native-extended-stylesheet'
+import { StyleSheet } from 'react-native'
+import { dimensions } from '../../../styles/index'
 
-const HEADER_CONTAINER_MARGIN_TOP = dimensions.fullHeight * 0.04;
+export const SAFE_AREA_VIEW_PADDING_TOP = dimensions.fullHeight * 0.05 // SafeAreaView
+
+export const KEYBOARD_OFFSET = dimensions.fullHeight / 2.6
 
 export default StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'yellow',
+    backgroundColor: 'yellow'
   },
-  headerContainer: {
-    marginTop: HEADER_CONTAINER_MARGIN_TOP,
+  contentContainer: {
+    flex: 7,
     backgroundColor: 'green',
-    height: 200,
+    justifyContent: 'flex-end',
+    alignItems: 'center',
+    paddingBottom: 300
   },
-});
+  footerContainer: {
+    flex: 1,
+    backgroundColor: 'red'
+  },
+  keyboardAvoidViewContainer: {
+    flex: 1,
+    backgroundColor: 'blue'
+  }
+})

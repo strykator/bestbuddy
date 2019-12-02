@@ -1,25 +1,35 @@
-import React from 'react';
-import {View, Text, StatusBar, Platform} from 'react-native';
-import PropTypes from 'prop-types';
-import styles from './styles';
-import {dimensions} from '../../../styles/index';
+import React from 'react'
+import {
+  View,
+  SafeAreaView,
+  TouchableWithoutFeedback,
+  Keyboard,
+  TextInput
+} from 'react-native'
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scrollview'
+import PropTypes from 'prop-types'
+import styles from './styles'
 
 const propTypes = {
-  header: PropTypes.object,
-};
+  children: PropTypes.object,
+  footer: PropTypes.object
+}
 
-console.log('width', dimensions.fullWidth);
-console.log('height', dimensions.fullHeight);
-
-const Layout = ({header}) => {
+const Layout = ({ children, footer }) => {
   return (
-    <View style={styles.container}>
-      <View style={styles.headerContainer}>
-      </View>
-    </View>
-  );
-};
+    <KeyboardAwareScrollView
+      keyboardDismissMode="interactive"
+      keyboardShouldPersistTaps="always">
+      <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
+        <SafeAreaView style={styles.container}>
+          <View style={styles.contentContainer}>{children}</View>
+          <View style={styles.footerContainer}>{footer}</View>
+        </SafeAreaView>
+      </TouchableWithoutFeedback>
+    </KeyboardAwareScrollView>
+  )
+}
 
-Layout.propTypes = propTypes;
+Layout.propTypes = propTypes
 
-export default Layout;
+export default Layout
