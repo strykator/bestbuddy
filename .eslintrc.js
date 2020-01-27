@@ -31,6 +31,17 @@ module.exports = {
     ]
   },
   settings: {
+    'import/resolver': {
+      'babel-module': {
+        alias: {
+          '@common': './app/views/@common',
+          '@components': './core/components'
+        }
+      },
+      node: {
+        extensions: ['.js', '.ios.js', '.android.js']
+      }
+    },
     'import/ignore': ['react-navigation'] // eslint-plugin-import/issues/1381
   }
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import { CoreLayout } from '@components'
+import { CoreButton } from '../../../../core/components'
 import PropTypes from 'prop-types'
 
 const propTypes = {
@@ -7,7 +7,7 @@ const propTypes = {
 }
 
 const Layout = ({ children }) => {
-  return <CoreLayout>{children}</CoreLayout>
+  return <CoreButton>{children}</CoreButton>
 }
 
 Layout.propTypes = propTypes

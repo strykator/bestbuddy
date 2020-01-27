@@ -18,6 +18,7 @@
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* BestBuddyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* BestBuddyTests.m */; };
 		44C0BCC3A9E23796EB0F940D /* libPods-BestBuddy-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FAA52788E04323489ECA74B /* libPods-BestBuddy-tvOS.a */; };
+		4F4EDF8D23B838CB00C6B846 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F4EDF8C23B838CB00C6B846 /* Photo.m */; };
 		C35B2979D054FCC3EE5FE980 /* libPods-BestBuddyTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5B103E31A41943D81CEF20C /* libPods-BestBuddyTests.a */; };
 		E130CF6AAEBC016D23C24F12 /* libPods-BestBuddy-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EB8B8DA889109A47298E55A /* libPods-BestBuddy-tvOSTests.a */; };
 /* End PBXBuildFile section */
@@ -59,6 +60,8 @@
 		3D474208545F21FFCED37D42 /* Pods-BestBuddy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BestBuddy.debug.xcconfig"; path = "Target Support Files/Pods-BestBuddy/Pods-BestBuddy.debug.xcconfig"; sourceTree = "<group>"; };
 		409497CC324D9BC3E4BB9AB0 /* Pods-BestBuddy-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BestBuddy-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-BestBuddy-tvOSTests/Pods-BestBuddy-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		41F5B05E7DAEF6B33824E311 /* Pods-BestBuddy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BestBuddy.release.xcconfig"; path = "Target Support Files/Pods-BestBuddy/Pods-BestBuddy.release.xcconfig"; sourceTree = "<group>"; };
+		4F4EDF8B23B8389200C6B846 /* Photo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
+		4F4EDF8C23B838CB00C6B846 /* Photo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
 		54DE2BDBE4AE333842A24CD5 /* libPods-BestBuddy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BestBuddy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C8AEC25F0DCA84A8280E12D /* Pods-BestBuddy-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BestBuddy-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-BestBuddy-tvOS/Pods-BestBuddy-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		A3ED0701DF2E903F2E099CAF /* Pods-BestBuddyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BestBuddyTests.release.xcconfig"; path = "Target Support Files/Pods-BestBuddyTests/Pods-BestBuddyTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -125,6 +128,8 @@
 		13B07FAE1A68108700A75B9A /* BestBuddy */ = {
 			isa = PBXGroup;
 			children = (
+				4F4EDF8B23B8389200C6B846 /* Photo.h */,
+				4F4EDF8C23B838CB00C6B846 /* Photo.m */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -194,7 +199,6 @@
 				B0B8300B2AB244DD27257B0A /* Pods-BestBuddyTests.debug.xcconfig */,
 				A3ED0701DF2E903F2E099CAF /* Pods-BestBuddyTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -308,6 +312,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -528,6 +533,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F4EDF8D23B838CB00C6B846 /* Photo.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
@@ -851,7 +857,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = YES;
+				COPY_PHASE_STRIP = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
