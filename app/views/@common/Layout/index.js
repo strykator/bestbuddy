@@ -1,5 +1,5 @@
 import React from 'react'
-import { CoreLayout } from '@components'
+import { Layout as CoreLayout } from '@components'
 import PropTypes from 'prop-types'
 
 const propTypes = {

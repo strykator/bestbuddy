@@ -1,4 +1,3 @@
-import { font } from './font'
-
 export { default as dimension } from './dimension'
-export { font }
+export { default as font } from './font'
+export { default as color } from './color'
