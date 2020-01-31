@@ -1,4 +1,4 @@
 export const buttonTypes = {
-  OUTLINE: 'OUTLINE',
-  SOLID: 'SOLID'
+  PRIMARY: 'PRIMARY',
+  SECONDARY: 'SECONDARY'
 }

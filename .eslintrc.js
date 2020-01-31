@@ -35,7 +35,9 @@ module.exports = {
       'babel-module': {
         alias: {
           '@common': './app/views/@common',
-          '@components': './core/components'
+          '@components': './core/components',
+          '@constants': './core/constants',
+          '@styles': './core/styles'
         }
       },
       node: {

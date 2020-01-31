@@ -1,11 +1,9 @@
 import React, { useState } from 'react'
-import { View, TextInput, Text, NativeModules } from 'react-native'
-import Layout from './views/@common/Layout'
+import { View, TextInput, Text } from 'react-native'
+import Layout from '@common/Layout'
+import SolidButton from '@common/SolidButton'
+import OutlinedButton from '@common/OutlinedButton'
 import { dimension } from './styles'
-
-const Photo = NativeModules.Photo
-Photo.addEvent('Birthday Party', '4 Privet Drive, Surrey')
-Photo.getEvent('Christmas', '6936 somerset')
 
 const App = () => {
   const [value, setValue] = useState('')
@@ -25,9 +23,20 @@ const App = () => {
       <View
         style={{
           flex: 1,
-          backgroundColor: 'blue',
+          backgroundColor: 'white',
           justifyContent: 'flex-end'
         }}>
+        <View
+          style={{
+            flex: 1,
+            flexDirection: 'column',
+            justifyContent: 'space-around',
+            alignItems: 'center'
+          }}>
+          <SolidButton text="CLICK ME" />
+          <OutlinedButton disabled half text="OUTLINED BUTTON" />
+        </View>
+
         <TextInput
           style={{
             height: 40,

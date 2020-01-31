@@ -1,3 +1,3 @@
-export { default as CoreLayout } from './Layout'
-export { default as CoreInput } from './Input'
-export { default as CoreButton } from './Button'
+export { default as Layout } from './Layout'
+export { default as Input } from './Input'
+export { default as Button } from './Button'

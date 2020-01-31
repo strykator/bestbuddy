@@ -6,7 +6,7 @@ const responsiveFontSize = f => {
   return Math.sqrt(Math.pow(tempHeight, 2) + Math.pow(width, 2)) * (f / 100)
 }
 
-export const font = {
+const font = {
   size: {
     xxxxl: responsiveFontSize(10),
     xxxl: responsiveFontSize(8),
@@ -26,3 +26,5 @@ export const font = {
     regular: 'Raleway-Regular'
   }
 }
+
+export default font
