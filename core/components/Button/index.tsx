@@ -7,7 +7,7 @@ import {
 } from 'react-native'
 import PropTypes from 'prop-types'
 import styles, { buttonSize } from './styles'
-import { color } from '@styles'
+import { color } from '@styles/index'
 import { iosPlatform } from '@styles/setting'
 
 const propTypes = {

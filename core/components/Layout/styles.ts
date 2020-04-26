@@ -1,6 +1,6 @@
 // import EStyleSheet from 'react-native-extended-stylesheet'
 import { StyleSheet } from 'react-native'
-import { dimension } from '../../styles'
+import { dimension } from '@styles'
 
 export const SAFE_AREA_VIEW_PADDING_TOP = dimension.fullHeight * 0.05 // SafeAreaView
 
