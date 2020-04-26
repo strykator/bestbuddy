@@ -2,9 +2,7 @@
 import { StyleSheet } from 'react-native'
 import { dimension } from '../../../styles'
 
-export const SAFE_AREA_VIEW_PADDING_TOP = dimension.fullHeight * 0.05 // SafeAreaView
-
-export const KEYBOARD_OFFSET = dimension.fullHeight / 2.6
+export const DEFAULT_INPUT_WIDTH = dimension.fullWidth * 0.87
 
 export default StyleSheet.create({
   container: {
