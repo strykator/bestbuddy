@@ -4,10 +4,10 @@
   ],
   "rules": {
     "ordered-imports": [
-      true
+      false
     ],
     "quotemark": [
-      true,
+      false,
       "single",
       "jsx-single",
       "avoid-escape"
@@ -23,7 +23,7 @@
       false
     ],
     "trailing-comma": [
-      true,
+      false,
       {
         "singleline": "never",
         "multiline": "always"
@@ -47,9 +47,7 @@
     "no-duplicate-imports": false,
     "jsx-alignment": true,
     "jsx-no-bind": true,
-    "jsx-no-lambda": true,
-    "max-classes-per-file": [
-      false
-    ]
+    "jsx-no-lambda": false,
+    "max-classes-per-file": false
   }
 }
