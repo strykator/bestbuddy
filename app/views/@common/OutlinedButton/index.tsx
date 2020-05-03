@@ -20,7 +20,8 @@ const propTypes = {
 }
 
 const OutlinedButton = ({ text, type, half, disabled, onPress }) => {
-  let borderColor, textColor
+  let borderColor
+  let textColor
 
   switch (type) {
     case buttonTypes.SECONDARY:
