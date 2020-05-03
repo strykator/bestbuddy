@@ -36,6 +36,8 @@ target 'BestBuddy' do
 
   pod 'react-native-config', :path => '../node_modules/react-native-config'
 
+  pod 'RNDevMenu', :path => '../node_modules/react-native-dev-menu'
+
   target 'BestBuddyTests' do
     inherit! :search_paths
     # Pods for testing

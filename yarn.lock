@@ -7033,6 +7033,11 @@ react-native-config@^1.0.0:
   resolved "https://registry.yarnpkg.com/react-native-config/-/react-native-config-1.0.0.tgz#fada8f79996db1eadcee9e221afd713c91f677e5"
   integrity sha512-ZydFNkGgjPCgJ4nDDGxuoMSsz4HACJH6TyYEDeefnzGW3XS/HXxdiW8SOaOD8B0WACQJHM028ypnwhexJ7hhsA==
 
+react-native-dev-menu@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/react-native-dev-menu/-/react-native-dev-menu-4.0.1.tgz#ce35be10dccb14e9eaefea8c423a9f694d4ce918"
+  integrity sha512-uH3wPnsyiSb8Aa3g8B/rsbAncLDHUEuY1xr2XYT5jyTbTp8vZJcHHYn5EjhcjrAkSZKltdJShB/hO73CK4ZrUg==
+
 react-native-extended-stylesheet@^0.12.0:
   version "0.12.0"
   resolved "https://registry.yarnpkg.com/react-native-extended-stylesheet/-/react-native-extended-stylesheet-0.12.0.tgz#ebacf22d78a8e2173bdef2a08cbf1acba4dc051f"
