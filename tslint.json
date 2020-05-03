@@ -45,7 +45,7 @@
       }
     ],
     "no-duplicate-imports": false,
-    "jsx-alignment": true,
+    "jsx-alignment": false,
     "jsx-no-bind": true,
     "jsx-no-lambda": false,
     "max-classes-per-file": false
