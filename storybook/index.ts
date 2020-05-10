@@ -1,6 +1,6 @@
 import { AppRegistry } from 'react-native'
 import { getStorybookUI, configure } from '@storybook/react-native'
-import { name as appName } from '../app.json'
+// import { name as appName } from '../app.json'
 
 // import stories
 configure(() => {
@@ -13,6 +13,6 @@ const StorybookUIRoot = getStorybookUI({})
 
 // If you are using React Native vanilla write your app name here.
 // If you use Expo you can safely remove this line.
-AppRegistry.registerComponent(appName, () => StorybookUIRoot)
+AppRegistry.registerComponent('BestBuddy', () => StorybookUIRoot)
 
 export default StorybookUIRoot
