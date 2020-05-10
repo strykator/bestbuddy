@@ -13,9 +13,10 @@ import { iosPlatform } from '@styles/setting'
 const propTypes = {
   onPress: PropTypes.func,
   text: PropTypes.string,
-  width: PropTypes.number,
+  width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   height: PropTypes.number,
-  half: PropTypes.bool,
+  halfSize: PropTypes.bool,
+  fullSize: PropTypes.bool,
   borderRadius: PropTypes.number,
   borderColor: PropTypes.string,
   backgroundColor: PropTypes.string,
@@ -29,7 +30,8 @@ const Button = ({
   text,
   width,
   height,
-  half,
+  halfSize,
+  fullSize,
   borderRadius,
   borderColor,
   backgroundColor,
@@ -37,13 +39,16 @@ const Button = ({
   disabled,
   loading
 }) => {
-  const borderColorStyle = borderColor && { borderColor }
+  const borderColorStyle = (borderColor && { borderColor }) || {
+    borderColor: 'transparent'
+  }
   const borderRadiusStyle = borderRadius && { borderRadius }
   const backgroundColorStyle = backgroundColor && { backgroundColor }
   const heightStyle = height && { height }
   const widthStyle = width && { width }
   const textColorStyle = textColor && { color: textColor }
-  const halfSize = half && buttonSize.half
+  const halfSizeStyle = halfSize && buttonSize.half
+  const fullSizeStyle = fullSize && buttonSize.full
 
   const buttonStyle = [
     styles.container,
@@ -52,7 +57,8 @@ const Button = ({
     backgroundColorStyle,
     heightStyle,
     widthStyle,
-    halfSize,
+    fullSizeStyle,
+    halfSizeStyle,
     disabled && {
       backgroundColor: color.lightDisabledColor,
       borderColor: 'transparent'

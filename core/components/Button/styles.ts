@@ -20,10 +20,9 @@ export const buttonSize = {
 
 export default StyleSheet.create({
   container: {
-    ...buttonSize.full,
     justifyContent: 'center',
     alignItems: 'center',
-    borderWidth: 3,
+    borderWidth: 2.5,
     borderRadius: 10
   },
   disabledText: {

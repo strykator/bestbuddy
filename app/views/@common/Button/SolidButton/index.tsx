@@ -6,9 +6,10 @@ import { color } from '@styles'
 const propTypes = {
   onPress: PropTypes.func,
   text: PropTypes.string,
-  width: PropTypes.number,
+  width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   height: PropTypes.number,
-  half: PropTypes.bool,
+  halfSize: PropTypes.bool,
+  fullSize: PropTypes.bool,
   borderRadius: PropTypes.number,
   borderColor: PropTypes.string,
   backgroundColor: PropTypes.string,
@@ -17,13 +18,22 @@ const propTypes = {
   loading: PropTypes.bool
 }
 
-const SolidButton = ({ text, half, disabled, onPress }) => {
+const SolidButton = ({
+  text,
+  halfSize,
+  fullSize = true,
+  width,
+  disabled,
+  onPress
+}) => {
   const primaryColor = color.primary
 
   return (
     <CoreButton
       onPress={onPress}
-      half={half}
+      halfSize={halfSize}
+      fullSize={fullSize}
+      width={width}
       disabled={disabled}
       text={text}
       textColor="white"

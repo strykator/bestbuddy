@@ -1,12 +1,15 @@
 import React from 'react'
-import { View, Text } from 'react-native'
+import Login from './Login'
+import PropTypes from 'prop-types'
 
-const OnBoarding = () => {
-  return (
-    <View>
-      <Text>On Boarding</Text>
-    </View>
-  )
+const propTypes = {
+  props: PropTypes.object
 }
+
+const OnBoarding = props => {
+  return <Login />
+}
+
+OnBoarding.propTypes = propTypes
 
 export default OnBoarding

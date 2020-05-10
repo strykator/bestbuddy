@@ -2,15 +2,16 @@ import React from 'react'
 import { Button as CoreButton } from '@components'
 import PropTypes from 'prop-types'
 import { color } from '@styles'
-import { buttonTypes } from '@constants'
+import { outlinedType } from '../types'
 
 const propTypes = {
   type: PropTypes.string,
   onPress: PropTypes.func,
   text: PropTypes.string,
-  width: PropTypes.number,
+  width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   height: PropTypes.number,
-  half: PropTypes.bool,
+  halfSize: PropTypes.bool,
+  fullSize: PropTypes.bool,
   borderRadius: PropTypes.number,
   borderColor: PropTypes.string,
   backgroundColor: PropTypes.string,
@@ -19,16 +20,24 @@ const propTypes = {
   loading: PropTypes.bool
 }
 
-const OutlinedButton = ({ text, type, half, disabled, onPress }) => {
+const OutlinedButton = ({
+  text,
+  type,
+  halfSize,
+  fullSize = true,
+  width,
+  disabled,
+  onPress
+}) => {
   let borderColor
   let textColor
 
   switch (type) {
-    case buttonTypes.SECONDARY:
+    case outlinedType.SECONDARY:
       borderColor = color.accent
       textColor = color.primary
       break
-    case buttonTypes.PRIMARY:
+    case outlinedType.PRIMARY:
     default:
       borderColor = textColor = color.primary
       break
@@ -37,7 +46,9 @@ const OutlinedButton = ({ text, type, half, disabled, onPress }) => {
   return (
     <CoreButton
       onPress={onPress}
-      half={half}
+      halfSize={halfSize}
+      fullSize={fullSize}
+      width={width}
       disabled={disabled}
       text={text}
       textColor={textColor}

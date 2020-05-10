@@ -6,8 +6,8 @@ import {
   FilledTextField,
   OutlinedTextField
 } from 'react-native-material-textfield'
-
 import { INPUT_WIDTH, INPUT_HEIGHT } from './styles'
+import { IInputProps } from './interface'
 
 const propTypes = {
   type: PropTypes.string,
@@ -32,7 +32,7 @@ const propTypes = {
   placeholder: PropTypes.string
 }
 
-const Input = ({
+const Input: React.FC<IInputProps> = ({
   type,
   secureTextEntry,
   autoEnableReturnKey,
@@ -52,8 +52,7 @@ const Input = ({
   width,
   height,
   disabled,
-  placeholder,
-  handle
+  placeholder
 }) => {
   const ref = useRef()
 

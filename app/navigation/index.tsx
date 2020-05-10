@@ -6,7 +6,7 @@ import App from '../index'
 import OnBoarding from '../views/onBoarding'
 import Storybook from '../../storybook'
 
-const Navigators = () => {
+const Navigation = () => {
   const Stack = createStackNavigator()
 
   const AddStorybookInDev = () =>
@@ -14,13 +14,13 @@ const Navigators = () => {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Home" component={App} />
+      <Stack.Navigator headerMode="none" initialRouteName="OnBoarding">
         <Stack.Screen name="OnBoarding" component={OnBoarding} />
+        <Stack.Screen name="Home" component={App} />
         {AddStorybookInDev()}
       </Stack.Navigator>
     </NavigationContainer>
   )
 }
 
-export default Navigators
+export default Navigation

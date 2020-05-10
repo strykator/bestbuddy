@@ -23,5 +23,12 @@ export default StyleSheet.create({
   keyboardAvoidViewContainer: {
     flex: 1,
     backgroundColor: 'blue'
+  },
+  showContainer: {
+    height: 50,
+    width: 50,
+    alignSelf: 'flex-end',
+    paddingTop: '30%',
+    position: 'absolute'
   }
 })
