@@ -1,7 +1,8 @@
 import React from 'react'
-import { Layout as CoreLayout } from '@components'
+import { Layout as CoreLayout } from '@core-components'
+import { ILayout } from './types'
 
-const Layout = ({ children, containerStyle }) => {
+const Layout: React.FC<ILayout> = ({ children, containerStyle }) => {
   return <CoreLayout containerStyle={containerStyle}>{children}</CoreLayout>
 }
 

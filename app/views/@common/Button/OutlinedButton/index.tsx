@@ -1,7 +1,7 @@
 import React from 'react'
-import { Button as CoreButton } from '@components'
-import { color } from '@styles'
-import { outlinedType } from '@constants'
+import { Button as CoreButton } from '@core-components'
+import { color } from '@core-styles'
+import { outlinedType } from '@core-constants'
 import { IOutlinedButton } from '../types'
 
 const OutlinedButton: React.FC<IOutlinedButton> = ({

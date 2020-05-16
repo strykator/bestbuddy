@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import { View } from 'react-native'
-import { Input as CoreInput } from '@components'
+import { Input as CoreInput } from '@core-components'
 import Button from '../Button'
 import styles, { DEFAULT_INPUT_WIDTH } from './styles'
-import { buttonType } from '@constants'
+import { buttonType } from '@core-constants'
 import { IInput } from './types'
 
 const Input: React.FC<IInput> = ({

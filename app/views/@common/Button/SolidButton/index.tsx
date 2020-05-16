@@ -1,6 +1,6 @@
 import React from 'react'
-import { Button as CoreButton } from '@components'
-import { color } from '@styles'
+import { Button as CoreButton } from '@core-components'
+import { color } from '@core-styles'
 import { ISolidButton } from '../types'
 
 const SolidButton: React.FC<ISolidButton> = ({

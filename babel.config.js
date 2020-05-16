@@ -7,9 +7,9 @@ module.exports = {
       {
         alias: {
           '@common': './app/views/@common',
-          '@components': './core/components',
-          '@constants': './core/constants',
-          '@styles': './core/styles'
+          '@core-components': './core/components',
+          '@core-constants': './core/constants',
+          '@core-styles': './core/styles'
         }
       }
     ]

@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-import { inputTypes } from './constants'
+import { inputType } from '@core-constants'
 import {
   TextField,
   FilledTextField,
@@ -104,18 +104,18 @@ const Input: React.FC<IInput> = ({
   )
 
   switch (type) {
-    case inputTypes.TYPE3:
+    case inputType.TYPE3:
       return renderFilledTextField()
-    case inputTypes.TYPE2:
+    case inputType.TYPE2:
       return renderOutlinedTextField()
-    case inputTypes.TYPE1:
+    case inputType.TYPE1:
     default:
       return renderTextField()
   }
 }
 
 Input.defaultProps = {
-  type: inputTypes.TYPE1,
+  type: inputType.TYPE1,
   maxLength: 30,
   characterRestriction: 20,
   returnKeyType: 'done',

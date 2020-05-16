@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native'
-import { dimension } from '@styles'
+import { dimension } from '@core-styles'
 
 const INPUT_CONTAINER_HEIGHT = dimension.fullHeight * 0.3
 

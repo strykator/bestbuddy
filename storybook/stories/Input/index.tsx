@@ -1,7 +1,7 @@
 import React from 'react'
 import { View, TouchableWithoutFeedback, Keyboard, Alert } from 'react-native'
 import { Input } from '@common'
-import { inputType } from '@constants'
+import { inputType } from '@core-constants'
 import styles from './styles'
 
 export default function() {

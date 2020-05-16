@@ -6,8 +6,8 @@ import {
   Text
 } from 'react-native'
 import styles, { buttonSize } from './styles'
-import { color } from '@styles/index'
-import { iosPlatform } from '@styles/setting'
+import { color } from '@core-styles'
+import { iosPlatform } from '@core-styles/setting'
 import { IButton } from './types'
 
 const Button: React.FC<IButton> = ({

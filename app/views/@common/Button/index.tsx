@@ -1,5 +1,5 @@
 import React from 'react'
-import { buttonType } from '@constants'
+import { buttonType } from '@core-constants'
 import OutlinedButton from './OutlinedButton'
 import SolidButton from './SolidButton'
 import TextButton from './TextButton'

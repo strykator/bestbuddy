@@ -16,12 +16,12 @@
     "paths": {
       "@common/*": ["app/views/@common/*"],
       "@common": ["app/views/@common"],
-      "@components/*": ["core/components/*"],
-      "@components": ["core/components"],
-      "@constants/*": ["core/constants/*"],
-      "@constants": ["core/constants"],
-      "@styles/*": ["core/styles/*"],
-      "@styles": ["core/styles"]
+      "@core-components/*": ["core/components/*"],
+      "@core-components": ["core/components"],
+      "@core-constants/*": ["core/constants/*"],
+      "@core-constants": ["core/constants"],
+      "@core-styles/*": ["core/styles/*"],
+      "@core-styles": ["core/styles"]
     }
   },
   "exclude": [

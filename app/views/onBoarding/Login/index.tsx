@@ -1,16 +1,8 @@
 import React from 'react'
 import { View } from 'react-native'
-import PropTypes from 'prop-types'
-import Input from '@common/Input'
-import Layout from '@common/Layout'
-import { Button } from '@common'
-import { buttonType } from '@constants'
-import { inputType } from '@constants'
+import { Button, Input, Layout } from '@common'
+import { inputType, buttonType } from '@core-constants'
 import styles from './styles'
-
-const propTypes = {
-  props: PropTypes.object
-}
 
 const Login = () => {
   return (
@@ -34,7 +26,5 @@ const Login = () => {
     </Layout>
   )
 }
-
-Login.propTypes = propTypes
 
 export default Login

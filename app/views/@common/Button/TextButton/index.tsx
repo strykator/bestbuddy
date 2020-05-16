@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button as CoreButton } from '@components'
+import { Button as CoreButton } from '@core-components'
 import { ITextButton } from '../types'
 
 const TextButton: React.FC<ITextButton> = ({ text, onPress, width }) => {

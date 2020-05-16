@@ -1,6 +1,6 @@
 // import EStyleSheet from 'react-native-extended-stylesheet'
 import { StyleSheet } from 'react-native'
-import { dimension } from '../../../styles'
+import { dimension } from '@core-styles'
 
 export const DEFAULT_INPUT_WIDTH = dimension.fullWidth * 0.87
 
