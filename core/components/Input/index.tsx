@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-import { inputTypes } from '@constants'
+import { inputTypes } from './constants'
 import {
   TextField,
   FilledTextField,

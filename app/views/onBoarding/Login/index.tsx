@@ -3,23 +3,24 @@ import { View } from 'react-native'
 import PropTypes from 'prop-types'
 import Input from '@common/Input'
 import Layout from '@common/Layout'
-import Button, { buttonType } from '@common/Button'
-import { inputTypes } from '@constants'
+import { Button } from '@common'
+import { buttonType } from '@constants'
+import { inputType } from '@constants'
 import styles from './styles'
 
 const propTypes = {
   props: PropTypes.object
 }
 
-const Login = props => {
+const Login = () => {
   return (
     <Layout containerStyle={styles.container}>
       <View>
         <View style={styles.inputContainer}>
-          <Input label="Username" type={inputTypes.TYPE2} />
+          <Input label="Username" type={inputType.TYPE2} />
           <Input
             label="Password"
-            type={inputTypes.TYPE2}
+            type={inputType.TYPE2}
             secureTextEntry
             toggleSecureTextEntry
           />

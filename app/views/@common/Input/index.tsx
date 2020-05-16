@@ -3,7 +3,7 @@ import { View } from 'react-native'
 import { Input as CoreInput } from '@components'
 import Button from '../Button'
 import styles, { DEFAULT_INPUT_WIDTH } from './styles'
-import { buttonType } from '../Button/constants'
+import { buttonType } from '@constants'
 import { IInput } from './types'
 
 const Input: React.FC<IInput> = ({

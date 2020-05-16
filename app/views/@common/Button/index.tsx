@@ -1,5 +1,5 @@
 import React from 'react'
-import { buttonType, outlinedType } from './constants'
+import { buttonType } from '@constants'
 import OutlinedButton from './OutlinedButton'
 import SolidButton from './SolidButton'
 import TextButton from './TextButton'
@@ -49,7 +49,5 @@ const Button: React.FC<IButton> = ({
       return renderSolidBtn()
   }
 }
-
-export { buttonType, outlinedType }
 
 export default Button

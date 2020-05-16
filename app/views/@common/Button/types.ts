@@ -5,7 +5,7 @@ export interface IButton {
   onPress(): any
   halfSize?: boolean
   fullSize?: boolean
-  width: number | string
+  width?: number | string
 }
 
 export interface ISolidButton {

@@ -5,7 +5,7 @@ export interface IInput {
   clearTextOnFocus?: boolean
   onFocus?(): any
   onChangeText?(): any
-  onSubmit?(): any
+  onSubmit?(e?: any): void
   errorText?: string
   underTitle?: string
   maxLength?: number

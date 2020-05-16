@@ -1,7 +1,7 @@
 import React from 'react'
 import { View, TouchableWithoutFeedback, Keyboard, Alert } from 'react-native'
-import Input from '@common/Input'
-import { inputTypes } from '@constants'
+import { Input } from '@common'
+import { inputType } from '@constants'
 import styles from './styles'
 
 export default function() {
@@ -9,7 +9,7 @@ export default function() {
     <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
       <View style={styles.container}>
         <Input
-          type={inputTypes.TYPE2}
+          type={inputType.TYPE2}
           width={200}
           placeholder="Enter your username"
           label="Username"
