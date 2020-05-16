@@ -6,27 +6,11 @@ export const DEFAULT_INPUT_WIDTH = dimension.fullWidth * 0.87
 
 export default StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: 'yellow'
-  },
-  contentContainer: {
-    flex: 7,
-    backgroundColor: 'green',
-    justifyContent: 'flex-end',
-    alignItems: 'center',
-    paddingBottom: 300
-  },
-  footerContainer: {
-    flex: 1,
-    backgroundColor: 'red'
-  },
-  keyboardAvoidViewContainer: {
-    flex: 1,
-    backgroundColor: 'blue'
+    flex: 1
   },
   showContainer: {
     height: 50,
-    width: 50,
+    width: 55,
     alignSelf: 'flex-end',
     paddingTop: '30%',
     position: 'absolute'

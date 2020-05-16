@@ -1,38 +1,14 @@
 import React, { useRef } from 'react'
 import { inputTypes } from '@constants'
-import PropTypes from 'prop-types'
 import {
   TextField,
   FilledTextField,
   OutlinedTextField
 } from 'react-native-material-textfield'
 import { INPUT_WIDTH, INPUT_HEIGHT } from './styles'
-import { IInputProps } from './interface'
+import { IInput } from './types'
 
-const propTypes = {
-  type: PropTypes.string,
-  secureTextEntry: PropTypes.bool,
-  autoEnableReturnKey: PropTypes.bool,
-  clearTextOnFocus: PropTypes.bool,
-  onFocus: PropTypes.func,
-  onChangeText: PropTypes.func,
-  onSubmit: PropTypes.func,
-  errorText: PropTypes.string,
-  underTitle: PropTypes.string,
-  maxLength: PropTypes.number,
-  characterRestriction: PropTypes.number,
-  renderRightAccessory: PropTypes.func,
-  label: PropTypes.string,
-  returnKeyType: PropTypes.string,
-  autoCapitalize: PropTypes.string,
-  autoCorrect: PropTypes.bool,
-  width: PropTypes.number,
-  height: PropTypes.number,
-  disabled: PropTypes.bool,
-  placeholder: PropTypes.string
-}
-
-const Input: React.FC<IInputProps> = ({
+const Input: React.FC<IInput> = ({
   type,
   secureTextEntry,
   autoEnableReturnKey,
@@ -43,7 +19,6 @@ const Input: React.FC<IInputProps> = ({
   errorText,
   underTitle,
   maxLength,
-  characterRestriction,
   renderRightAccessory,
   label,
   returnKeyType,
@@ -138,8 +113,6 @@ const Input: React.FC<IInputProps> = ({
       return renderTextField()
   }
 }
-
-Input.propTypes = propTypes
 
 Input.defaultProps = {
   type: inputTypes.TYPE1,

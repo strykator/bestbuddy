@@ -5,27 +5,12 @@ import {
   TouchableNativeFeedback,
   Text
 } from 'react-native'
-import PropTypes from 'prop-types'
 import styles, { buttonSize } from './styles'
 import { color } from '@styles/index'
 import { iosPlatform } from '@styles/setting'
+import { IButton } from './types'
 
-const propTypes = {
-  onPress: PropTypes.func,
-  text: PropTypes.string,
-  width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-  height: PropTypes.number,
-  halfSize: PropTypes.bool,
-  fullSize: PropTypes.bool,
-  borderRadius: PropTypes.number,
-  borderColor: PropTypes.string,
-  backgroundColor: PropTypes.string,
-  textColor: PropTypes.string,
-  disabled: PropTypes.bool,
-  loading: PropTypes.bool
-}
-
-const Button = ({
+const Button: React.FC<IButton> = ({
   onPress,
   text,
   width,
@@ -95,7 +80,5 @@ const Button = ({
 
   return iosPlatform ? renderIOSButton() : renderAndroidButton()
 }
-
-Button.propTypes = propTypes
 
 export default Button

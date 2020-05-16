@@ -2,16 +2,11 @@ import React, { useState } from 'react'
 import { View } from 'react-native'
 import { Input as CoreInput } from '@components'
 import Button from '../Button'
-import PropTypes from 'prop-types'
 import styles, { DEFAULT_INPUT_WIDTH } from './styles'
-import { buttonType } from '../Button/types'
-import { IInputProps } from './interface'
+import { buttonType } from '../Button/constants'
+import { IInput } from './types'
 
-const propTypes = {
-  children: PropTypes.object
-}
-
-const Input: React.FC<IInputProps> = ({
+const Input: React.FC<IInput> = ({
   width,
   height,
   type,
@@ -64,11 +59,9 @@ const Input: React.FC<IInputProps> = ({
   )
 }
 
-Input.propTypes = propTypes
-
 Input.defaultProps = {
   width: DEFAULT_INPUT_WIDTH,
-  label: null
+  label: ''
 }
 
 export default Input

@@ -6,15 +6,10 @@ import {
   Keyboard
 } from 'react-native'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
-import PropTypes from 'prop-types'
+import { ILayout } from './types'
 import styles from './styles'
 
-const propTypes = {
-  children: PropTypes.oneOfType([PropTypes.element, PropTypes.array]),
-  containerStyle: PropTypes.object
-}
-
-const Layout = ({ children, containerStyle }) => {
+const Layout: React.FC<ILayout> = ({ children, containerStyle }) => {
   return (
     <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
       <SafeAreaView style={styles.container}>
@@ -27,7 +22,5 @@ const Layout = ({ children, containerStyle }) => {
     </TouchableWithoutFeedback>
   )
 }
-
-Layout.propTypes = propTypes
 
 export default Layout

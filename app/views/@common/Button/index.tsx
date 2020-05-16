@@ -1,21 +1,11 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import { buttonType, outlinedType } from './types'
+import { buttonType, outlinedType } from './constants'
 import OutlinedButton from './OutlinedButton'
 import SolidButton from './SolidButton'
 import TextButton from './TextButton'
+import { IButton } from './types'
 
-const propTypes = {
-  type: PropTypes.string.isRequired,
-  subType: PropTypes.string,
-  halfSize: PropTypes.bool,
-  fullSize: PropTypes.bool,
-  width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-  text: PropTypes.string,
-  onPress: PropTypes.func
-}
-
-const Button = ({
+const Button: React.FC<IButton> = ({
   type,
   subType,
   text,
@@ -59,8 +49,6 @@ const Button = ({
       return renderSolidBtn()
   }
 }
-
-Button.propTypes = propTypes
 
 export { buttonType, outlinedType }
 

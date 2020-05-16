@@ -1,4 +1,4 @@
-export interface IInputProps {
+export interface IInput {
   type?: string
   secureTextEntry?: boolean
   autoEnableReturnKey?: boolean
@@ -19,4 +19,5 @@ export interface IInputProps {
   height?: number
   disabled?: boolean
   placeholder?: string
+  toggleSecureTextEntry?: boolean
 }

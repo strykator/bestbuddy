@@ -1,26 +1,10 @@
 import React from 'react'
 import { Button as CoreButton } from '@components'
-import PropTypes from 'prop-types'
 import { color } from '@styles'
-import { outlinedType } from '../types'
+import { outlinedType } from '../constants'
+import { IOutlinedButton } from '../types'
 
-const propTypes = {
-  type: PropTypes.string,
-  onPress: PropTypes.func,
-  text: PropTypes.string,
-  width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-  height: PropTypes.number,
-  halfSize: PropTypes.bool,
-  fullSize: PropTypes.bool,
-  borderRadius: PropTypes.number,
-  borderColor: PropTypes.string,
-  backgroundColor: PropTypes.string,
-  textColor: PropTypes.string,
-  disabled: PropTypes.bool,
-  loading: PropTypes.bool
-}
-
-const OutlinedButton = ({
+const OutlinedButton: React.FC<IOutlinedButton> = ({
   text,
   type,
   halfSize,
@@ -57,7 +41,5 @@ const OutlinedButton = ({
     />
   )
 }
-
-OutlinedButton.propTypes = propTypes
 
 export default OutlinedButton

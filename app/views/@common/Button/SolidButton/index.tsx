@@ -1,24 +1,9 @@
 import React from 'react'
 import { Button as CoreButton } from '@components'
-import PropTypes from 'prop-types'
 import { color } from '@styles'
+import { ISolidButton } from '../types'
 
-const propTypes = {
-  onPress: PropTypes.func,
-  text: PropTypes.string,
-  width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-  height: PropTypes.number,
-  halfSize: PropTypes.bool,
-  fullSize: PropTypes.bool,
-  borderRadius: PropTypes.number,
-  borderColor: PropTypes.string,
-  backgroundColor: PropTypes.string,
-  textColor: PropTypes.string,
-  disabled: PropTypes.bool,
-  loading: PropTypes.bool
-}
-
-const SolidButton = ({
+const SolidButton: React.FC<ISolidButton> = ({
   text,
   halfSize,
   fullSize = true,
@@ -42,7 +27,5 @@ const SolidButton = ({
     />
   )
 }
-
-SolidButton.propTypes = propTypes
 
 export default SolidButton

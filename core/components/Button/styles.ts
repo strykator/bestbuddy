@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native'
-import { dimension } from '../../styles'
+import { dimension, font } from '../../styles'
 
 const BUTTON_WIDTH = dimension.fullWidth * 0.8
 const BUTTON_HEIGHT = dimension.fullWidth * 0.12
@@ -27,5 +27,8 @@ export default StyleSheet.create({
   },
   disabledText: {
     color: 'white'
+  },
+  text: {
+    fontSize: font.size.m
   }
 })
