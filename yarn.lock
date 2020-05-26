@@ -6830,6 +6830,13 @@ react-native-material-textfield@^0.16.1:
   dependencies:
     prop-types "^15.5.9"
 
+react-native-plaid-link-sdk@^3.3.1:
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/react-native-plaid-link-sdk/-/react-native-plaid-link-sdk-3.3.1.tgz#1bfe6cb310fe47fc93f5ee7333492f2974700e81"
+  integrity sha512-DopY46SY3LzJ5zwnJGbPTSm5mX2rb8S/GFy3sSnbjC6nW/fVsNuvLlucL8nrhgNoB8CIdGy8Hwi80uu7VljVVA==
+  dependencies:
+    prop-types "^15.7.2"
+
 react-native-reanimated@^1.8.0:
   version "1.8.0"
   resolved "https://registry.yarnpkg.com/react-native-reanimated/-/react-native-reanimated-1.8.0.tgz#0b5719b20c1fed9aaf8afd9a12e21c9bd46ee428"

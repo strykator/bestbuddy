@@ -23,6 +23,7 @@
     "react-native-gesture-handler": "^1.6.1",
     "react-native-keyboard-aware-scroll-view": "^0.9.1",
     "react-native-material-textfield": "^0.16.1",
+    "react-native-plaid-link-sdk": "^3.3.1",
     "react-native-reanimated": "^1.8.0",
     "react-native-safe-area-context": "^1.0.0",
     "react-native-screens": "^2.7.0",

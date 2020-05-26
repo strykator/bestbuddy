@@ -180,8 +180,12 @@ android {
 }
 
 dependencies {
+    implementation project(':react-native-plaid-link-sdk')
+    implementation 'com.plaid.link:sdk-core:<insert latest version>'
+    
     implementation project(':react-native-dev-menu')
     implementation project(':react-native-config')
+
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "com.facebook.react:react-native:+"  // From node_modules
     
