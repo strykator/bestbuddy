@@ -9,11 +9,5 @@ export const KEYBOARD_OFFSET = dimension.fullHeight / 2.6
 export default StyleSheet.create({
   container: {
     flex: 1
-  },
-  contentContainer: {
-    flex: 8
-  },
-  keyboardContent: {
-    flex: 1
   }
 })

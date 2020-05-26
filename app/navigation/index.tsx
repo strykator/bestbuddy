@@ -4,6 +4,7 @@ import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 import App from '../index'
 import OnBoarding from '../views/onBoarding'
+import AuthenticationNavigator from './AuthenticationNavigator'
 import Storybook from '../../storybook'
 
 const Navigation = () => {
@@ -14,8 +15,13 @@ const Navigation = () => {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator headerMode="none" initialRouteName="OnBoarding">
-        <Stack.Screen name="OnBoarding" component={OnBoarding} />
+      <Stack.Navigator
+        headerMode="none"
+        initialRouteName="AuthenticationNavigator">
+        <Stack.Screen
+          name="AuthenticationNavigator"
+          component={AuthenticationNavigator}
+        />
         <Stack.Screen name="Home" component={App} />
         {AddStorybookInDev()}
       </Stack.Navigator>
