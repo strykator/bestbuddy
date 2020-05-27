@@ -3,7 +3,6 @@ import React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 import App from '../index'
-import OnBoarding from '../views/onBoarding'
 import AuthenticationNavigator from './AuthenticationNavigator'
 import Storybook from '../../storybook'
 

@@ -1,6 +1,6 @@
 import React from 'react'
 import { View, TouchableWithoutFeedback, Keyboard, Alert } from 'react-native'
-import { Input } from '@common'
+import { Input } from '@core-components'
 import { inputType } from '@core-constants'
 import styles from './styles'
 

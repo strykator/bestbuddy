@@ -6,11 +6,13 @@ module.exports = {
       'module-resolver',
       {
         alias: {
-          '@common': './app/views/@common',
+          '@views': './app/views',
           '@hooks': './app/hooks',
           '@core-components': './core/components',
           '@core-constants': './core/constants',
-          '@core-styles': './core/styles'
+          '@core-hooks': './core/hooks',
+          '@core-styles': './core/styles',
+          '@core-utils': './core/utils'
         }
       }
     ]

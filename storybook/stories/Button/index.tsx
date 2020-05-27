@@ -1,6 +1,6 @@
 import React from 'react'
 import { View } from 'react-native'
-import { Button } from '@common'
+import { Button } from '@core-components'
 import { buttonType, outlinedType } from '@core-constants'
 import { Space } from '../utils'
 import styles from './styles'

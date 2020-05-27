@@ -2,7 +2,7 @@ import React from 'react'
 import * as eva from '@eva-design/eva'
 import { ApplicationProvider } from '@ui-kitten/components'
 import { useNavigation } from '@react-navigation/native'
-import { Layout } from '@common'
+import { Layout } from '@core-components'
 import Home from './views/Home/index'
 
 const App = () => {

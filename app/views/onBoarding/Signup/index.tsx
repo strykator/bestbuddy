@@ -1,8 +1,7 @@
 import React from 'react'
 import { View } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
-import { Button, Input, Layout } from '@common'
-import { KeyboardAware } from '@core-components'
+import { Layout, KeyboardAware, Input, Button } from '@core-components'
 import { inputType, buttonType } from '@core-constants'
 import styles from './styles'
 

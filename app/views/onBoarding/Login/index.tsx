@@ -1,13 +1,17 @@
 import React from 'react'
 import { View } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
-import { Button, Input, Layout } from '@common'
 import { inputType, buttonType } from '@core-constants'
-import { KeyboardAware } from '@core-components'
+import { Layout, KeyboardAware, Input, Button } from '@core-components'
 import styles from './styles'
 
 const Login = () => {
   const navigation = useNavigation()
+
+  if (__DEV__) {
+    const DevMenu = require('react-native-dev-menu')
+    DevMenu.addItem('Show Storybook', () => navigation.navigate('Storybook'))
+  }
 
   return (
     <KeyboardAware scrollHeight={100}>

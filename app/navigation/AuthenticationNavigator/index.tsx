@@ -1,7 +1,7 @@
 import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack'
-import OnBoarding from '../../views/onBoarding'
-import SignUp from '../../views/onBoarding/Signup'
+import OnBoarding from '@views/onBoarding'
+import SignUp from '@views/onBoarding/Signup'
 
 const AuthenticationNavigator = () => {
   const Stack = createStackNavigator()

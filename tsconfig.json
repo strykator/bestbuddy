@@ -14,11 +14,14 @@
     "noImplicitAny": false,
     "baseUrl": ".",
     "paths": {
-      "@common": ["app/views/@common"],
+      "@views": ["app/views"],
+      "@views/*": ["app/views/*"],
       "@hooks": ["app/hooks"],
       "@core-components": ["core/components"],
       "@core-constants": ["core/constants"],
-      "@core-styles": ["core/styles"]
+      "@core-hooks": ["core/hooks"],
+      "@core-styles": ["core/styles"],
+      "@core-utils": ["core/utils"]
     }
   },
   "exclude": [

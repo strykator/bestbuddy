@@ -1,6 +1,6 @@
 import React from 'react'
 import { View, Text } from 'react-native'
-import { Button } from '@common'
+import { Button } from '@core-components'
 import PlaidLink from 'react-native-plaid-link-sdk'
 import Config from 'react-native-config'
 import styles from './styles'

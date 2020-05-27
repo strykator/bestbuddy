@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button as CoreButton } from '@core-components'
+import CoreButton from '../CoreButton'
 import { color } from '@core-styles'
 import { outlinedType } from '@core-constants'
 import { IOutlinedButton } from '../types'

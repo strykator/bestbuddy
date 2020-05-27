@@ -1,5 +1,7 @@
-import React, { useRef } from 'react'
-import { inputType } from '@core-constants'
+import React, { useRef, useState } from 'react'
+import { View } from 'react-native'
+import { inputType, buttonType } from '@core-constants'
+import { Button } from '@core-components'
 import {
   TextField,
   FilledTextField,
@@ -7,6 +9,7 @@ import {
 } from 'react-native-material-textfield'
 import { INPUT_WIDTH, INPUT_HEIGHT } from './styles'
 import { IInput } from './types'
+import styles from './styles'
 
 const Input: React.FC<IInput> = ({
   type,
@@ -27,14 +30,31 @@ const Input: React.FC<IInput> = ({
   width,
   height,
   disabled,
-  placeholder
+  placeholder,
+  toggleSecureTextEntry
 }) => {
   const ref = useRef()
+  const [enabledSecureText, setEnabledSecureText] = useState(secureTextEntry)
+
+  const renderShowBtn = () => {
+    const text = enabledSecureText ? 'Show' : 'Hide'
+    const shouldShowBtn = secureTextEntry && toggleSecureTextEntry
+    return shouldShowBtn ? (
+      <View style={styles.showContainer}>
+        <Button
+          type={buttonType.TEXT}
+          text={text}
+          width={50}
+          onPress={() => setEnabledSecureText(!enabledSecureText)}
+        />
+      </View>
+    ) : null
+  }
 
   const renderFilledTextField = () => (
     <FilledTextField
       ref={ref}
-      secureTextEntry={secureTextEntry}
+      secureTextEntry={enabledSecureText}
       autoCapitalize={autoCapitalize}
       autoCorrect={autoCorrect}
       enablesReturnKeyAutomatically={autoEnableReturnKey}
@@ -58,7 +78,7 @@ const Input: React.FC<IInput> = ({
   const renderOutlinedTextField = () => (
     <OutlinedTextField
       ref={ref}
-      secureTextEntry={secureTextEntry}
+      secureTextEntry={enabledSecureText}
       autoCapitalize={autoCapitalize}
       autoCorrect={autoCorrect}
       enablesReturnKeyAutomatically={autoEnableReturnKey}
@@ -82,7 +102,7 @@ const Input: React.FC<IInput> = ({
   const renderTextField = () => (
     <TextField
       ref={ref}
-      secureTextEntry={secureTextEntry}
+      secureTextEntry={enabledSecureText}
       autoCapitalize={autoCapitalize}
       autoCorrect={autoCorrect}
       enablesReturnKeyAutomatically={autoEnableReturnKey}
@@ -103,15 +123,24 @@ const Input: React.FC<IInput> = ({
     />
   )
 
-  switch (type) {
-    case inputType.TYPE3:
-      return renderFilledTextField()
-    case inputType.TYPE2:
-      return renderOutlinedTextField()
-    case inputType.TYPE1:
-    default:
-      return renderTextField()
+  const renderInput = () => {
+    switch (type) {
+      case inputType.TYPE3:
+        return renderFilledTextField()
+      case inputType.TYPE2:
+        return renderOutlinedTextField()
+      case inputType.TYPE1:
+      default:
+        return renderTextField()
+    }
   }
+
+  return (
+    <View>
+      {renderInput()}
+      {renderShowBtn()}
+    </View>
+  )
 }
 
 Input.defaultProps = {
